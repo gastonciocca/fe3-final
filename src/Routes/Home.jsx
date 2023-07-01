@@ -25,30 +25,3 @@ return (
 }
 
 export default Home
-/*
-const Home = () => {
-  const [dentists,setDentists] = useState([])
-  const url = `https://jsonplaceholder.typicode.com/users`
-
-  useEffect (() => {
-    axios(url)
-    .then(res => setDentists(res.data))
-  }, [url])
-
-  return (
-    <main className="" >
-      <h1>Home</h1>
-      <div className='card-grid'>
-        {dentists.map((dentist) =>(
-          <Link to={'/dentista/' + dentist.id} key={dentist.id}>
-              <Card name={dentist.name} username={dentist.username} id={dentist.id}/>
-          </Link>
-          ))
-        }
-      </div>
-    </main>
-  )
-}
-
-export default Home
-*/
