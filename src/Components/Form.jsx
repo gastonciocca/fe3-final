@@ -1,15 +1,28 @@
 import React from "react";
 
 
-const Form = () => {
-  //Aqui deberan implementar el form completo con sus validaciones
+const Form = ({setContacto, handleSubmit}) => {
+  return(
+<div className="form">
+  <form onSubmit={handleSubmit} 
+        style={{
+            display: 'flex', 
+            flexDirection:'column',
+            width:'500px',
+            alignItems:'center',
+            marginBottom:'10px'
+            }}>
+        <label >Nombre Completo</label>
+        <input type="text" onBlur={(e) => setContacto((prevState) => ({...prevState, nombre: e.target.value}))}/>
+        <label >Email </label>
+        <input type="email" onBlur={(e) => setContacto((prevState) => ({...prevState, email: e.target.value}))}/>
 
-  return (
-    <div>
-      <form>
-      </form>
-    </div>
-  );
-};
+        
+        <button className="button">Send</button>
+    </form>
+  
 
-export default Form;
+</div>
+)}
+
+export default Form
